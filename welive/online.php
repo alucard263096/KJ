@@ -80,7 +80,7 @@ if($_CFG['cActived']){
 					break;
 
 				case 2:
-					echo '<li><a href="http://wpa.qq.com/msgrd?V=1&amp;Uin='.$user['username'].'&amp;Site='.APP_NAME.'&amp;Menu=yes" target="_blank" title="'.preg_replace('/\/\/1/i', $userfrontname, $lang['clickchat']).'"><img src="http://wpa.qq.com/pa?p=1:'.$user['username'].':4" height="16" alt="QQ" align="absmiddle"> '.$userfrontname.'</a></li>';
+					echo '<li><a href="http://wpa.qq.com/msgrd?v=3&uin='.$user['username'].'&site=qq&menu=yes" target="_blank" title="'.preg_replace('/\/\/1/i', $userfrontname, $lang['clickchat']).'"><img src="http://wpa.qq.com/pa?p=1:'.$user['username'].':4" height="16" alt="QQ" align="absmiddle"> '.$userfrontname.'</a></li>';
 					break;
 
 				case 3:
