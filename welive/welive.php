@@ -11,6 +11,20 @@ include('includes/welive.Core.php');
 header_nocache();
 
 $iframe_height = $_CFG['cPanalHeight'];
+
+if($_CFG['cActived']){
+	$online_cache_file = BASEPATH . "cache/online_cache.php";
+	@include($online_cache_file);
+
+	$heightcount=count($welive_onlines);
+	foreach($welive_onlines as $val){
+		$heightcount+=count($val["user"]);
+	}
+	$heightcount+=2;
+	$iframe_height=$heightcount*22;
+}
+
+
 $thisUrl = base64_encode($_SERVER['HTTP_REFERER']);
 
 if($_CFG['cActived']){
